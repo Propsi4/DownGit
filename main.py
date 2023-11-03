@@ -56,12 +56,11 @@ def download_file(url, file_path, size=0):
 
 def get_content(url):
     try:
-        try:
-            content = requests.get(url, headers=HEADERS).json()
-        except:
-            print("Please provide a valid url")
-            sys.exit(0)
-
+        content = requests.get(url, headers=HEADERS).json()
+    except:
+        print("Please provide a valid url")
+        sys.exit(0)
+    try:
         for i in content:
             if ignore_files:
                 # remove the root folder from the path
