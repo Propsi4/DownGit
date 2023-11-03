@@ -3,7 +3,7 @@ import os
 import sys
 
 
-script_path = os.path.abspath(__file__)
+token_path = os.path.join(os.path.dirname(os.path.abspath(os.path.join(sys.executable, os.pardir))), "token")
 download_path = os.getcwd()
 
 HEADERS = None
@@ -12,15 +12,19 @@ def check_token(token):
     HEADERS = {
         "Authorization": "Bearer " + token
     }
-    r = requests.get("https://api.github.com/user", headers=HEADERS)
+    try:
+        r = requests.get("https://api.github.com/user", headers=HEADERS)
+    except:
+        print("Could not connect to GitHub. Please check your internet connection")
+        sys.exit(0)
     if r.status_code == 200:
         return True
     else:
         return False
 
 # update headers if token exists
-if os.path.exists(os.path.join(os.path.dirname(script_path), "token")):
-    token_file = open(os.path.join(os.path.dirname(script_path), "token"), "r")
+if os.path.exists(os.path.join(os.path.dirname(token_path), "token")):
+    token_file = open(os.path.join(os.path.dirname(token_path), "token"), "r")
     token = token_file.read()
     token_file.close()
     if check_token(token):
@@ -29,7 +33,6 @@ if os.path.exists(os.path.join(os.path.dirname(script_path), "token")):
         }
     else:
         print("Token is invalid or expired. Please set a new token using the command 'set-token <token>'")
-
 
 
 def download_file(url, file_path, size=0):
@@ -110,7 +113,6 @@ if __name__ == "__main__":
             case "set-token":
                 try:
                     token = sys.argv[2]
-                    token_path = os.path.join(os.path.dirname(script_path), "token")
                     token_file = open(token_path, "w")
                     token_file.write(token)
                     token_file.close()
@@ -126,7 +128,6 @@ if __name__ == "__main__":
 
             case "remove-token":
                 try:
-                    token_path = os.path.join(os.path.dirname(script_path), "token")
                     os.remove(token_path)
                     print("Token removed successfully")
                 except Exception as e:
