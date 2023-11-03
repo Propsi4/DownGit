@@ -36,7 +36,6 @@ if os.path.exists(os.path.join(os.path.dirname(token_path), "token")):
 
 
 def download_file(url, file_path, size=0):
-    print(f'File path: {file_path}')
     save_path = os.path.join(download_path, file_path)
     file_name = save_path.split("/")[-1]
     # check if file already exists
