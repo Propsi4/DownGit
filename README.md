@@ -1,7 +1,7 @@
 
 # DownGitCMD
 ## 🔴WARNING🔴: 
-  `main.py was compiled to downgit.exe using pyinstaller, so antiviruses labels it as a virus, while is actually not.`
+  `main.py was compiled into downgit.exe using pyinstaller, so antivirus programs label it as a virus, even though it is not.`
 ## Description:
 DownGitCMD is a simple and convenient command-line tool that allows users to download GitHub repositories without the need to use the web interface. This program provides access to GitHub repositories through commands, simplifying and speeding up the download process. It also enables users to set their own token to increase the rate limits for API requests to GitHub.
 ## Installation:
