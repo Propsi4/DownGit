@@ -2,8 +2,19 @@
 # DownGitCMD
 
 DownGitCMD is a simple and convenient command-line tool that allows users to download GitHub repositories without the need to use the web interface. This program provides access to GitHub repositories through commands, simplifying and speeding up the download process. It also enables users to set their own token to increase the rate limits for API requests to GitHub.
+## Installation:
+#### 1. Download this repository.
+#### 2. Move it to any directory you want.
+#### 3. Copy path to bin/ folder. 
+Example: C:\Users\User\Documents\DownGitCMD\bin 
+#### 4. Add this path to environment variables in Windows, quick guide here -> [Tutorial](https://www.computerhope.com/issues/ch000549.htm)
 
-# Commands:
+<p align="center">
+  <img src="env_vars_example.png" alt="example" title="Environment Variables in Windows"/>
+</p>
+
+#### 5. Open command line and use
+## Commands:
 ```
 downgit get
 downgit set-token
