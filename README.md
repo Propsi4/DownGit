@@ -1,9 +1,9 @@
 
-# DownGitCMD
+# DownGit
 ## 🔴WARNING🔴: 
   `There may occur some bugs, if you find any, please report them to me.`
 ## Description:
-DownGitCMD is a simple and convenient command-line tool that allows users to download exact folders from GitHub repositories without the need to use the web interface or 3-rd party websites that provide this feature. This program provides access to GitHub repositories through commands, simplifying and speeding up the download process. It also enables users to set their own token to increase the rate limits for API requests to GitHub.
+DownGit is a simple and convenient command-line tool that allows users to download exact folders from GitHub repositories without the need to use the web interface or 3-rd party websites that provide this feature. This program provides access to GitHub repositories through commands, simplifying and speeding up the download process. It also enables users to set their own token to increase the rate limits for API requests to GitHub.
 ## Installation:
 `pip install downgit`
 
@@ -27,5 +27,5 @@ downgit help
 
 - `help` - The help command displays the command menu to familiarize users with the available options and correct command syntax.
 
-DownGitCMD is an excellent tool for working with GitHub repositories through the command line, simplifying the download process and making it more efficient.
+DownGit is an excellent tool for working with GitHub repositories through the command line, simplifying the download process and making it more efficient.
 
