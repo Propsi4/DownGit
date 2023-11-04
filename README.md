@@ -1,21 +1,12 @@
 
 # DownGitCMD
 ## 🔴WARNING🔴: 
-  `main.py was compiled into downgit.exe using pyinstaller, so antivirus programs label it as a virus, even though it is not.`
+  `There may occur some bugs, if you find any, please report them to me.`
 ## Description:
 DownGitCMD is a simple and convenient command-line tool that allows users to download exact folders from GitHub repositories without the need to use the web interface or 3-rd party websites that provide this feature. This program provides access to GitHub repositories through commands, simplifying and speeding up the download process. It also enables users to set their own token to increase the rate limits for API requests to GitHub.
 ## Installation:
-#### 1. Download this repository.
-#### 2. Move it to any directory you want.
-#### 3. Copy path to the folder where you placed this script(for dev-version it is bin/). 
-Example: C:\Users\User\Documents\DownGitCMD\bin 
-#### 4. Add this path to environment variables in Windows, quick guide here -> [Tutorial](https://www.computerhope.com/issues/ch000549.htm)
+`pip install downgit`
 
-<p align="center">
-  <img src="env_vars_example.png" alt="example" title="Environment Variables in Windows"/>
-</p>
-
-#### 5. Open command line and use
 ## Commands:
 ```
 downgit get
