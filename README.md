@@ -7,7 +7,7 @@ DownGitCMD is a simple and convenient command-line tool that allows users to dow
 ## Installation:
 #### 1. Download this repository.
 #### 2. Move it to any directory you want.
-#### 3. Copy path to bin/ folder. 
+#### 3. Copy path to the folder where you placed this script(for dev-version it is bin/). 
 Example: C:\Users\User\Documents\DownGitCMD\bin 
 #### 4. Add this path to environment variables in Windows, quick guide here -> [Tutorial](https://www.computerhope.com/issues/ch000549.htm)
 
