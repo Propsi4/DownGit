@@ -54,6 +54,9 @@ def download_file(url, file_path, size=0):
     # get file
     r = requests.get(url, headers=HEADERS, stream=True)
 
+
+    if not os.path.exists(os.path.dirname(save_path)):
+        os.makedirs(os.path.dirname(save_path))
     if r.status_code == 200:
         with open(save_path, 'wb') as f:
             progress_bar = tqdm(total=size, unit='iB', unit_scale=True, colour="green")
@@ -115,6 +118,7 @@ def get_content(url):
             print(Fore.LIGHTRED_EX + f'Error occured:' + content['message'])
         except:
             print(Fore.LIGHTRED_EX + "An unknown error occured")
+        
         print(Fore.LIGHTYELLOW_EX + "Possible solution:")
         print(Fore.LIGHTYELLOW_EX + "1. Set a valid token using the command 'set-token <token>'")
         print(Fore.LIGHTYELLOW_EX + "2. Wait for 60 minutes and try again (rate limit is 60 requests per hour)")
@@ -122,6 +126,8 @@ def get_content(url):
 
 def main():
     global ignore_files, IS_SUBDIR
+
+
     # get command
     try:
         command = sys.argv[1]
