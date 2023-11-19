@@ -107,8 +107,9 @@ def get_content(url):
                     return
             path = content["path"]
             # replace the root folder with the current directory, only if it is a subdirectory of a repository
-            if IS_SUBDIR:
-                path = path.replace(path.split("/")[0] + "/", "")
+            path = path.split('/')[-1]
+                
+            print(path)
             # path = path.replace(path.split("/")[0] + "/", "")
             size = content["size"]
             url = content["download_url"]

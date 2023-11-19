@@ -5,7 +5,7 @@ with open("package/README.md", "r", encoding = "utf-8") as fh:
 
 setup(
     name='downgit',
-    version='1.9',
+    version='2.0',
     author = "Propsi4",
     author_email = "gaenday12@gmail.com",
     description = "Download any subdirectory or file from GitHub repository",
